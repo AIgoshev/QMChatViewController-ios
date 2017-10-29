@@ -29,6 +29,7 @@ Pod::Spec.new do |s|
   s.platform     = :ios, "8.0"
   s.source       = { :git => "https://github.com/QuickBlox/QMChatViewController-ios.git", :tag => "#{s.version}" }
   s.source_files = "QMChatViewController/QMChatViewController.{h,m}"
+  s.xcconfig            = {"FRAMEWORK_SEARCH_PATHS" => "$(PODS_ROOT)/../../Framework $(PODS_ROOT)/../External"}
 
   s.subspec 'QMChatLocationSnapshotter' do |ss|
     ss.source_files = 'QMChatViewController/QMChatLocationSnapshotter/*.{h,m}'
@@ -76,6 +77,5 @@ Pod::Spec.new do |s|
   s.dependency "TTTAttributedLabel"
   s.dependency "SDWebImage"
   s.dependency "FFCircularProgressView"
-  s.dependency "QuickBlox", ">= 2.10"
 
 end
