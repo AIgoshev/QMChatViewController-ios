@@ -67,6 +67,7 @@
             ||!UIEdgeInsetsEqualToEdgeInsets(layoutAttributes.containerInsets, self.containerInsets)
             ||(int)layoutAttributes.topLabelHeight != (int)self.topLabelHeight
             ||(int)layoutAttributes.bottomLabelHeight != (int)self.bottomLabelHeight
+            ||(int)layoutAttributes.timerLabelHeight != (int)self.timerLabelHeight
             || (int)layoutAttributes.spaceBetweenTopLabelAndTextView != (int)self.spaceBetweenTopLabelAndTextView
             || (int)layoutAttributes.spaceBetweenTextViewAndBottomLabel != (int)self.spaceBetweenTextViewAndBottomLabel) {
             
@@ -103,6 +104,7 @@
     copy.containerSize = self.containerSize;
     copy.containerInsets = self.containerInsets;
     copy.bottomLabelHeight = self.bottomLabelHeight;
+    copy.timerLabelHeight = self.timerLabelHeight;
     copy.topLabelHeight = self.topLabelHeight;
     copy.spaceBetweenTextViewAndBottomLabel = self.spaceBetweenTextViewAndBottomLabel;
     copy.spaceBetweenTopLabelAndTextView = self.spaceBetweenTopLabelAndTextView;

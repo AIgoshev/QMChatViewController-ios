@@ -27,6 +27,7 @@
     defaultLayoutModel.containerInsets = UIEdgeInsetsMake(4, 12, 4, 4);
     defaultLayoutModel.topLabelHeight = 0;
     defaultLayoutModel.bottomLabelHeight = 14;
+    defaultLayoutModel.timerLabelHeight = 0;
     return defaultLayoutModel;
 }
 

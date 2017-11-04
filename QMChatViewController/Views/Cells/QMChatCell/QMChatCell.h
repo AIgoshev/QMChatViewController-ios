@@ -9,8 +9,10 @@
 #import <UIKit/UIKit.h>
 #import "QMChatContainerView.h"
 #import <TTTAttributedLabel/TTTAttributedLabel.h>
+#import "MZTimerLabel.h"
 #import "QMChatCellLayoutAttributes.h"
 #import "QMImageView.h"
+
 
 struct QMChatLayoutModel {
     
@@ -19,6 +21,7 @@ struct QMChatLayoutModel {
     UIEdgeInsets containerInsets;
     CGFloat topLabelHeight;
     CGFloat bottomLabelHeight;
+    CGFloat timerLabelHeight;
     CGSize staticContainerSize;
     CGFloat spaceBetweenTopLabelAndTextView;
     CGFloat spaceBetweenTextViewAndBottomLabel;
@@ -153,6 +156,12 @@ typedef struct QMChatLayoutModel QMChatCellLayoutModel;
  *  Doing so could result in unexpected behavior.
  */
 @property (weak, nonatomic, readonly) TTTAttributedLabel *bottomLabel;
+
+/**
+ *
+ *  Returns timer chat message label.
+ */
+@property (weak, nonatomic, readonly) MZTimerLabel * timerLabel;
 
 /**
  *  Returns the underlying gesture recognizer for tap gestures in the avatarContainerView of the cell.

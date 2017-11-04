@@ -18,6 +18,7 @@
     defaultLayoutModel.topLabelHeight = 0;
     defaultLayoutModel.spaceBetweenTextViewAndBottomLabel = 0;
     defaultLayoutModel.bottomLabelHeight = 14;
+    defaultLayoutModel.timerLabelHeight = 0;
     
     return defaultLayoutModel;
 }

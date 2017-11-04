@@ -132,6 +132,16 @@
 - (NSAttributedString *)bottomLabelAttributedStringForItem:(QBChatMessage *)messageItem;
 
 /**
+ *  Method to create chat message timer label (Usually - chat message destruction time). Have to be overriden in subclasses.
+ *
+ *  @param messageItem Chat message instance.
+ *
+ *  @return Configured time interval (if return value is -1 it's mean that timer have off mode).
+ */
+
+- (NSTimeInterval) timerLabelIntervalForItem:(QBChatMessage*)messageItem;
+
+/**
  *  Collection Cell View class for specific message. Have to be overriden in subclasses. Defaults cells are supplied with QMChatViewController.
  *
  *  @param item Chat message instance.

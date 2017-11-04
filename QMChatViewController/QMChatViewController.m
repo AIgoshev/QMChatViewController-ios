@@ -541,7 +541,18 @@ UIAlertViewDelegate, QMChatDataSourceDelegate>
         chatCell.topLabel.text = [self topLabelAttributedStringForItem:messageItem];
         chatCell.textView.text = [self attributedStringForItem:messageItem];
         chatCell.bottomLabel.text = [self bottomLabelAttributedStringForItem:messageItem];
+        
+        NSTimeInterval timerInterval = [self timerLabelIntervalForItem:messageItem];
+        if (timerInterval != 0){
+            [chatCell.timerLabel setCountDownTime:timerInterval];
+        }
+        
     }
+}
+
+- (NSTimeInterval) timerLabelIntervalForItem:(QBChatMessage*)messageItem {
+    NSAssert(NO, @"Have to be overridden in subclasses!");
+    return 0;
 }
 
 - (NSAttributedString *)topLabelAttributedStringForItem:(QBChatMessage *)messageItem {

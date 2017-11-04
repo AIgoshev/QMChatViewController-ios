@@ -18,6 +18,7 @@
     defaultLayoutModel.avatarSize = CGSizeMake(0, 0);
     defaultLayoutModel.topLabelHeight = 0;
     defaultLayoutModel.bottomLabelHeight = 0;
+    defaultLayoutModel.timerLabelHeight = 0;
     
     return defaultLayoutModel;
 }

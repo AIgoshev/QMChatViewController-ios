@@ -28,6 +28,7 @@ static NSMutableSet *_qmChatCellMenuActions = nil;
 @property (weak, nonatomic) IBOutlet TTTAttributedLabel *textView;
 @property (weak, nonatomic) IBOutlet TTTAttributedLabel *topLabel;
 @property (weak, nonatomic) IBOutlet TTTAttributedLabel *bottomLabel;
+@property (weak, nonatomic) IBOutlet MZTimerLabel * timerLabel;
 
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *containerWidthConstraint;
 
@@ -41,6 +42,7 @@ static NSMutableSet *_qmChatCellMenuActions = nil;
 
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *topLabelHeightConstraint;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *bottomLabelHeightConstraint;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *timerLabelHeightConstraint;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *textViewBottomLabelVerticalSpaceConstraint;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *topLabelTextViewVerticalSpaceConstraint;
 
@@ -112,6 +114,7 @@ static NSMutableSet *_qmChatCellMenuActions = nil;
     
     _topLabelHeightConstraint.constant = 0;
     _bottomLabelHeightConstraint.constant = 0;
+    _timerLabelHeightConstraint.constant = 0;
     
     _topLabelTextViewVerticalSpaceConstraint.constant = 0;
     _textViewBottomLabelVerticalSpaceConstraint.constant = 0;
@@ -122,6 +125,7 @@ static NSMutableSet *_qmChatCellMenuActions = nil;
     self.topLabel.backgroundColor = [UIColor clearColor];
     self.textView.backgroundColor = [UIColor clearColor];
     self.bottomLabel.backgroundColor = [UIColor clearColor];
+    self.timerLabel.backgroundColor = [UIColor clearColor];
     self.containerView.backgroundColor = [UIColor clearColor];
     self.avatarView.backgroundColor = [UIColor clearColor];
 #endif
@@ -156,6 +160,8 @@ static NSMutableSet *_qmChatCellMenuActions = nil;
     
     [self updateConstraint:self.bottomLabelHeightConstraint
               withConstant:customAttributes.bottomLabelHeight];
+    
+    [self updateConstraint:self.timerLabelHeightConstraint withConstant:customAttributes.timerLabelHeight];
     
     [self updateConstraint:self.messageContainerTopInsetConstraint
               withConstant:customAttributes.containerInsets.top];
@@ -323,6 +329,7 @@ static NSMutableSet *_qmChatCellMenuActions = nil;
         .containerSize = CGSizeZero,
         .topLabelHeight = 17,
         .bottomLabelHeight = 14,
+        .timerLabelHeight = 22,
         .maxWidthMarginSpace = 20,
         .maxWidth = 0
     };

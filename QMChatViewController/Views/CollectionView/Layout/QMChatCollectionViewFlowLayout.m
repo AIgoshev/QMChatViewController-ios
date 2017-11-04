@@ -222,7 +222,7 @@
                                                                      maxWidth:maximumWidth - horizontalInsetsTotal];
         CGFloat verticalContainerInsets =
         layoutModel.containerInsets.top + layoutModel.containerInsets.bottom +
-        layoutModel.topLabelHeight + layoutModel.bottomLabelHeight;
+        layoutModel.topLabelHeight + layoutModel.bottomLabelHeight + layoutModel.timerLabelHeight;
         
         CGFloat additionalSpace =
         layoutModel.spaceBetweenTextViewAndBottomLabel + layoutModel.spaceBetweenTopLabelAndTextView;
@@ -276,6 +276,7 @@
     layoutAttributes.containerInsets = layoutModel.containerInsets;
     layoutAttributes.topLabelHeight = layoutModel.topLabelHeight;
     layoutAttributes.bottomLabelHeight = layoutModel.bottomLabelHeight;
+    layoutAttributes.timerLabelHeight = layoutModel.timerLabelHeight;
     layoutAttributes.spaceBetweenTopLabelAndTextView = layoutModel.spaceBetweenTopLabelAndTextView;
     layoutAttributes.spaceBetweenTextViewAndBottomLabel = layoutModel.spaceBetweenTextViewAndBottomLabel;
 }
