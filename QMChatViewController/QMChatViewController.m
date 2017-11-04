@@ -543,11 +543,26 @@ UIAlertViewDelegate, QMChatDataSourceDelegate>
         chatCell.bottomLabel.text = [self bottomLabelAttributedStringForItem:messageItem];
         
         NSTimeInterval timerInterval = [self timerLabelIntervalForItem:messageItem];
-        if (timerInterval != 0){
+        if (timerInterval > 0){
+            
+            chatCell.timerLabel.hidden = NO;
             [chatCell.timerLabel setCountDownTime:timerInterval];
+            chatCell.timerLabel.timerType = MZTimerLabelTypeTimer;
+            
+            __weak __typeof(self)weakSelf = self;
+            [chatCell.timerLabel startWithEndingBlock:^(NSTimeInterval countTime) {
+                [weakSelf messageTimerIsInvalid];
+                
+            }];
+        } else {
+            chatCell.timerLabel.endedBlock = nil;
+            chatCell.timerLabel.hidden = YES;
         }
-        
     }
+}
+
+- (void) messageTimerIsInvalid{
+    NSAssert(NO, @"Have to be overridden in subclasses!");
 }
 
 - (NSTimeInterval) timerLabelIntervalForItem:(QBChatMessage*)messageItem {

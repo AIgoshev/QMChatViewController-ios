@@ -329,7 +329,7 @@ static NSMutableSet *_qmChatCellMenuActions = nil;
         .containerSize = CGSizeZero,
         .topLabelHeight = 17,
         .bottomLabelHeight = 14,
-        .timerLabelHeight = 22,
+        .timerLabelHeight = 0,
         .maxWidthMarginSpace = 20,
         .maxWidth = 0
     };

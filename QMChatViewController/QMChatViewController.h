@@ -277,6 +277,13 @@
  */
 - (void)hideKeyboard:(BOOL)animated;
 
+/**
+ *  Method to notificate that exist timer message with expired time.
+ *
+ *  Have to be overriden in subclasses.
+ */
+- (void) messageTimerIsInvalid;
+
 #pragma mark - Methods requiring super
 
 - (void)viewDidLoad NS_REQUIRES_SUPER;
