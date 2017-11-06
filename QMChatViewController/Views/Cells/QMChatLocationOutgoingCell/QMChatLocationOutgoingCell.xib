@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -64,16 +64,28 @@
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EqE-8H-IMO" userLabel="Timer" customClass="MZTimerLabel">
+                                        <rect key="frame" x="-1" y="175" width="166" height="0.0"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" id="hGo-nl-vRr"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="diF-ca-yd3" firstAttribute="leading" secondItem="aUM-zm-5ky" secondAttribute="leading" id="2GS-ez-PaZ"/>
                                     <constraint firstItem="diF-ca-yd3" firstAttribute="top" secondItem="aUM-zm-5ky" secondAttribute="top" id="2YG-PH-oBY"/>
                                     <constraint firstAttribute="trailing" secondItem="35y-FC-UxN" secondAttribute="trailing" id="AoC-SQ-Y4a"/>
+                                    <constraint firstItem="EqE-8H-IMO" firstAttribute="leading" secondItem="aUM-zm-5ky" secondAttribute="leading" id="Jmt-FB-4D1"/>
                                     <constraint firstItem="35y-FC-UxN" firstAttribute="top" secondItem="v1t-qy-7VR" secondAttribute="bottom" id="NuX-bQ-Nnj"/>
                                     <constraint firstAttribute="trailing" secondItem="v1t-qy-7VR" secondAttribute="trailing" id="QjY-TS-GTP"/>
                                     <constraint firstItem="35y-FC-UxN" firstAttribute="leading" secondItem="aUM-zm-5ky" secondAttribute="leading" id="Xda-1O-jom"/>
-                                    <constraint firstAttribute="bottom" secondItem="35y-FC-UxN" secondAttribute="bottom" id="qjn-WF-jgP"/>
+                                    <constraint firstAttribute="bottom" secondItem="EqE-8H-IMO" secondAttribute="bottom" id="Yip-2R-JCJ"/>
+                                    <constraint firstAttribute="trailing" secondItem="EqE-8H-IMO" secondAttribute="trailing" id="pvn-bG-nVd"/>
+                                    <constraint firstItem="EqE-8H-IMO" firstAttribute="top" secondItem="35y-FC-UxN" secondAttribute="bottom" id="sM3-1k-oaw"/>
                                     <constraint firstAttribute="trailing" secondItem="diF-ca-yd3" secondAttribute="trailing" id="sf6-RH-gfz"/>
                                     <constraint firstItem="v1t-qy-7VR" firstAttribute="leading" secondItem="aUM-zm-5ky" secondAttribute="leading" id="vdA-gK-ogS"/>
                                     <constraint firstItem="v1t-qy-7VR" firstAttribute="top" secondItem="diF-ca-yd3" secondAttribute="bottom" id="wEd-yx-94v"/>
@@ -130,6 +142,8 @@
                 <outlet property="messageContainerRightInsetConstraint" destination="FuO-6F-2wi" id="Ko4-f5-1hi"/>
                 <outlet property="messageContainerTopInsetConstraint" destination="5b4-p7-Dki" id="ivg-8j-Kut"/>
                 <outlet property="textViewBottomLabelVerticalSpaceConstraint" destination="NuX-bQ-Nnj" id="L0T-uW-9UC"/>
+                <outlet property="timerLabel" destination="EqE-8H-IMO" id="d4J-XZ-TEQ"/>
+                <outlet property="timerLabelHeightConstraint" destination="hGo-nl-vRr" id="Ydy-oU-R14"/>
                 <outlet property="topLabel" destination="diF-ca-yd3" id="ALz-IV-YCL"/>
                 <outlet property="topLabelHeightConstraint" destination="hqg-jI-Mlo" id="AUj-9L-u18"/>
                 <outlet property="topLabelTextViewVerticalSpaceConstraint" destination="wEd-yx-94v" id="Hqs-wn-GtY"/>

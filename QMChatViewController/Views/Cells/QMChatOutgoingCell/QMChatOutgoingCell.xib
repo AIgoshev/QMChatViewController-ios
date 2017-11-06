@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment version="2048" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -68,17 +68,29 @@
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mUw-D0-3Wb" userLabel="Timer" customClass="MZTimerLabel">
+                                        <rect key="frame" x="0.0" y="74" width="166" height="0.0"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" id="p0X-lJ-hfZ"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
+                                    <constraint firstItem="mUw-D0-3Wb" firstAttribute="top" secondItem="KM3-Oj-tba" secondAttribute="bottom" id="0LB-xm-AXH"/>
                                     <constraint firstItem="h8u-4h-IEt" firstAttribute="leading" secondItem="UGA-Lo-mbI" secondAttribute="leading" priority="100" identifier="outgCellTopLabelLeading" id="2hL-wa-XL0"/>
+                                    <constraint firstAttribute="trailing" secondItem="mUw-D0-3Wb" secondAttribute="trailing" id="6Xo-Uq-xB4"/>
                                     <constraint firstItem="KM3-Oj-tba" firstAttribute="top" secondItem="gwl-pf-rea" secondAttribute="bottom" id="BQZ-mi-zJi"/>
                                     <constraint firstAttribute="trailing" secondItem="gwl-pf-rea" secondAttribute="trailing" identifier="outgCellMessageTextLabelTrailing" id="C4J-58-vtD"/>
                                     <constraint firstAttribute="trailing" secondItem="KM3-Oj-tba" secondAttribute="trailing" id="Cnr-Ch-k1c"/>
                                     <constraint firstItem="h8u-4h-IEt" firstAttribute="top" secondItem="UGA-Lo-mbI" secondAttribute="top" id="E1C-0z-mfn"/>
                                     <constraint firstAttribute="trailing" secondItem="h8u-4h-IEt" secondAttribute="trailing" identifier="outgCellTopLabelTrailing" id="KrN-Zw-ZY1"/>
-                                    <constraint firstAttribute="bottom" secondItem="KM3-Oj-tba" secondAttribute="bottom" identifier="outgCellBottomLabelBottom" id="Qq4-nq-W8i"/>
                                     <constraint firstItem="KM3-Oj-tba" firstAttribute="leading" secondItem="UGA-Lo-mbI" secondAttribute="leading" id="UGl-WW-1AM"/>
+                                    <constraint firstItem="mUw-D0-3Wb" firstAttribute="leading" secondItem="UGA-Lo-mbI" secondAttribute="leading" id="dFu-pf-LFV"/>
+                                    <constraint firstAttribute="bottom" secondItem="mUw-D0-3Wb" secondAttribute="bottom" id="lID-Hl-5xX"/>
                                     <constraint firstItem="gwl-pf-rea" firstAttribute="top" secondItem="h8u-4h-IEt" secondAttribute="bottom" id="mbp-Hv-6Tq"/>
                                     <constraint firstItem="gwl-pf-rea" firstAttribute="leading" secondItem="UGA-Lo-mbI" secondAttribute="leading" identifier="outgCellMessageTextLabelLeading" id="x6U-gp-Ps7"/>
                                 </constraints>
@@ -134,6 +146,8 @@
                 <outlet property="messageContainerTopInsetConstraint" destination="Oep-MV-D9j" id="3nI-aa-1UH"/>
                 <outlet property="textView" destination="gwl-pf-rea" id="y5I-qm-hyU"/>
                 <outlet property="textViewBottomLabelVerticalSpaceConstraint" destination="BQZ-mi-zJi" id="dBa-7K-cFG"/>
+                <outlet property="timerLabel" destination="mUw-D0-3Wb" id="sqP-yh-0mX"/>
+                <outlet property="timerLabelHeightConstraint" destination="p0X-lJ-hfZ" id="F9p-Gd-Sed"/>
                 <outlet property="topLabel" destination="h8u-4h-IEt" id="hdo-Lk-tvT"/>
                 <outlet property="topLabelHeightConstraint" destination="VYw-Ld-ar1" id="SGp-H8-Qeb"/>
                 <outlet property="topLabelTextViewVerticalSpaceConstraint" destination="mbp-Hv-6Tq" id="OJk-NT-Qbw"/>

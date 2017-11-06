@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -98,6 +98,15 @@
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TBR-1l-Qdq" userLabel="Timer" customClass="MZTimerLabel">
+                                        <rect key="frame" x="0.0" y="119" width="166" height="0.0"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" id="s35-Fz-27t"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -112,13 +121,16 @@
                                     <constraint firstItem="X6a-hB-7rN" firstAttribute="leading" secondItem="423-hd-4AY" secondAttribute="trailing" constant="5" id="T5w-YS-ATM"/>
                                     <constraint firstItem="BaK-pp-v8N" firstAttribute="leading" secondItem="b4K-43-sAv" secondAttribute="leading" priority="100" identifier="outgCellTopLabelLeading" id="Vez-NL-0fU"/>
                                     <constraint firstItem="X6a-hB-7rN" firstAttribute="top" secondItem="gtv-mE-Fbt" secondAttribute="bottom" constant="2" id="WPy-eY-sit"/>
+                                    <constraint firstAttribute="trailing" secondItem="TBR-1l-Qdq" secondAttribute="trailing" id="XVy-Ma-2Xv"/>
                                     <constraint firstItem="gtv-mE-Fbt" firstAttribute="top" secondItem="BaK-pp-v8N" secondAttribute="bottom" id="aRc-HX-mLY"/>
                                     <constraint firstItem="gtv-mE-Fbt" firstAttribute="leading" secondItem="b4K-43-sAv" secondAttribute="leading" identifier="outgCellMessageTextLabelLeading" id="c8g-KO-mot"/>
                                     <constraint firstAttribute="trailing" secondItem="YCF-fp-1aZ" secondAttribute="trailing" id="ceD-6G-8c2"/>
                                     <constraint firstItem="BaK-pp-v8N" firstAttribute="top" secondItem="b4K-43-sAv" secondAttribute="top" id="dnC-PD-OKL"/>
+                                    <constraint firstAttribute="bottom" secondItem="TBR-1l-Qdq" secondAttribute="bottom" id="dxe-N2-DZu"/>
                                     <constraint firstItem="Ia9-vE-ORk" firstAttribute="leading" secondItem="423-hd-4AY" secondAttribute="trailing" constant="5" id="gWs-xo-aN2"/>
+                                    <constraint firstItem="TBR-1l-Qdq" firstAttribute="top" secondItem="YCF-fp-1aZ" secondAttribute="bottom" id="hhY-00-iYR"/>
                                     <constraint firstItem="423-hd-4AY" firstAttribute="leading" secondItem="b4K-43-sAv" secondAttribute="leading" constant="5" id="oAr-Ms-4UF"/>
-                                    <constraint firstAttribute="bottom" secondItem="YCF-fp-1aZ" secondAttribute="bottom" identifier="outgCellBottomLabelBottom" id="pJC-TM-Uu0"/>
+                                    <constraint firstItem="TBR-1l-Qdq" firstAttribute="leading" secondItem="b4K-43-sAv" secondAttribute="leading" id="sRj-rm-wSS"/>
                                     <constraint firstItem="DSq-Ar-b0o" firstAttribute="top" secondItem="Ia9-vE-ORk" secondAttribute="bottom" constant="2" id="tom-cQ-cNV"/>
                                     <constraint firstItem="YCF-fp-1aZ" firstAttribute="leading" secondItem="b4K-43-sAv" secondAttribute="leading" id="vQm-rE-c8m"/>
                                     <constraint firstAttribute="trailing" secondItem="BaK-pp-v8N" secondAttribute="trailing" identifier="outgCellTopLabelTrailing" id="vwV-71-aVA"/>
@@ -176,6 +188,8 @@
                 <outlet property="messageContainerTopInsetConstraint" destination="Nhj-xn-vah" id="vWm-tF-cbD"/>
                 <outlet property="previewImageView" destination="Ia9-vE-ORk" id="bIx-Br-GQ4"/>
                 <outlet property="textView" destination="gtv-mE-Fbt" id="Od7-V3-xZG"/>
+                <outlet property="timerLabel" destination="TBR-1l-Qdq" id="ebT-qt-E7E"/>
+                <outlet property="timerLabelHeightConstraint" destination="s35-Fz-27t" id="ZwD-we-0jC"/>
                 <outlet property="topLabel" destination="BaK-pp-v8N" id="jRM-sH-1U0"/>
                 <outlet property="topLabelHeightConstraint" destination="rVO-td-7hg" id="pTJ-Ti-IkN"/>
                 <outlet property="topLabelTextViewVerticalSpaceConstraint" destination="aRc-HX-mLY" id="ous-HK-F7d"/>

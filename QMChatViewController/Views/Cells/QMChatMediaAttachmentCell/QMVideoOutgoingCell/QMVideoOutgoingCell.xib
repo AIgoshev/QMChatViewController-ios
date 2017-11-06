@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13156.6" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13137.5"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -64,6 +64,15 @@
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="imR-A9-Pvq" userLabel="Timer" customClass="MZTimerLabel">
+                                        <rect key="frame" x="-1" y="175" width="166" height="0.0"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" id="iCW-gf-mPr"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OT0-Sd-Nzq" customClass="FFCircularProgressView">
                                         <rect key="frame" x="57" y="62" width="50" height="50"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -96,16 +105,19 @@
                                     <constraint firstItem="OT0-Sd-Nzq" firstAttribute="centerY" secondItem="POB-ZI-etn" secondAttribute="centerY" id="2Sp-1H-5ZV"/>
                                     <constraint firstItem="diF-ca-yd3" firstAttribute="top" secondItem="aUM-zm-5ky" secondAttribute="top" id="2YG-PH-oBY"/>
                                     <constraint firstAttribute="trailing" secondItem="35y-FC-UxN" secondAttribute="trailing" id="AoC-SQ-Y4a"/>
+                                    <constraint firstAttribute="trailing" secondItem="imR-A9-Pvq" secondAttribute="trailing" id="BEF-5I-nGs"/>
                                     <constraint firstItem="OT0-Sd-Nzq" firstAttribute="centerX" secondItem="POB-ZI-etn" secondAttribute="centerX" id="BYN-fH-MuO"/>
                                     <constraint firstItem="Tve-03-DKT" firstAttribute="leading" secondItem="aUM-zm-5ky" secondAttribute="leading" id="Cu1-jT-1tl"/>
                                     <constraint firstItem="POB-ZI-etn" firstAttribute="centerX" secondItem="Tve-03-DKT" secondAttribute="centerX" id="NpL-XW-38g"/>
                                     <constraint firstItem="35y-FC-UxN" firstAttribute="top" secondItem="Tve-03-DKT" secondAttribute="bottom" id="QGP-lp-lfN"/>
+                                    <constraint firstItem="imR-A9-Pvq" firstAttribute="leading" secondItem="aUM-zm-5ky" secondAttribute="leading" id="Uac-lY-aD8"/>
                                     <constraint firstItem="35y-FC-UxN" firstAttribute="leading" secondItem="aUM-zm-5ky" secondAttribute="leading" id="Xda-1O-jom"/>
                                     <constraint firstItem="xux-6h-6al" firstAttribute="top" secondItem="Tve-03-DKT" secondAttribute="top" constant="2" id="YKQ-lW-bbD"/>
+                                    <constraint firstItem="imR-A9-Pvq" firstAttribute="top" secondItem="35y-FC-UxN" secondAttribute="bottom" id="hqh-By-5xD"/>
                                     <constraint firstAttribute="trailing" secondItem="Tve-03-DKT" secondAttribute="trailing" id="nJl-Te-LvY"/>
-                                    <constraint firstAttribute="bottom" secondItem="35y-FC-UxN" secondAttribute="bottom" id="qjn-WF-jgP"/>
                                     <constraint firstItem="POB-ZI-etn" firstAttribute="centerY" secondItem="Tve-03-DKT" secondAttribute="centerY" id="rdr-w2-4aU"/>
                                     <constraint firstAttribute="trailing" secondItem="diF-ca-yd3" secondAttribute="trailing" id="sf6-RH-gfz"/>
+                                    <constraint firstAttribute="bottom" secondItem="imR-A9-Pvq" secondAttribute="bottom" id="syp-as-24F"/>
                                     <constraint firstItem="Tve-03-DKT" firstAttribute="top" secondItem="diF-ca-yd3" secondAttribute="bottom" id="xs4-sc-NTj"/>
                                     <constraint firstItem="xux-6h-6al" firstAttribute="leading" secondItem="aUM-zm-5ky" secondAttribute="leading" constant="2" id="zuL-AR-8Ap"/>
                                 </constraints>
@@ -163,6 +175,8 @@
                 <outlet property="messageContainerTopInsetConstraint" destination="5b4-p7-Dki" id="ivg-8j-Kut"/>
                 <outlet property="previewImageView" destination="Tve-03-DKT" id="WTB-46-tf7"/>
                 <outlet property="textViewBottomLabelVerticalSpaceConstraint" destination="QGP-lp-lfN" id="qJA-Vj-aG2"/>
+                <outlet property="timerLabel" destination="imR-A9-Pvq" id="0O9-lc-u9G"/>
+                <outlet property="timerLabelHeightConstraint" destination="iCW-gf-mPr" id="ptg-sW-Wwq"/>
                 <outlet property="topLabel" destination="diF-ca-yd3" id="c6N-mg-5vB"/>
                 <outlet property="topLabelHeightConstraint" destination="hqg-jI-Mlo" id="AUj-9L-u18"/>
                 <outlet property="topLabelTextViewVerticalSpaceConstraint" destination="xs4-sc-NTj" id="XNp-5O-3BZ"/>

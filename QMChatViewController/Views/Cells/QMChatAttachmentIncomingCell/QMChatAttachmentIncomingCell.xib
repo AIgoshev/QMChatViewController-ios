@@ -99,6 +99,15 @@
                                     <constraint firstItem="Fa7-ju-G0X" firstAttribute="leading" secondItem="1rv-oZ-ov9" secondAttribute="leading" id="xUT-Sx-H5g"/>
                                 </constraints>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VYE-18-lXY" userLabel="Timer" customClass="MZTimerLabel">
+                                <rect key="frame" x="-2" y="100" width="166" height="0.0"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" id="Awz-Zl-9pW"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>

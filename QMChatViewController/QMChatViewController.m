@@ -40,6 +40,9 @@ UIAlertViewDelegate, QMChatDataSourceDelegate>
 
 @property (strong, nonatomic) NSIndexPath *selectedIndexPathForMenu;
 
+
+@property (strong, nonatomic) NSMutableArray* messageTimersExistArray;
+
 //Keyboard observing
 @property (strong, nonatomic) QMKVOView *systemInputToolbar;
 
@@ -115,6 +118,8 @@ UIAlertViewDelegate, QMChatDataSourceDelegate>
     self.inputToolbar.contentView.textView.inputAccessoryView = self.systemInputToolbar;
     
     self.edgesForExtendedLayout = UIRectEdgeNone;
+
+    self.messageTimersExistArray = [[NSMutableArray alloc] init];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -545,20 +550,37 @@ UIAlertViewDelegate, QMChatDataSourceDelegate>
         NSTimeInterval timerInterval = [self timerLabelIntervalForItem:messageItem];
         if (timerInterval > 0){
             
-            chatCell.timerLabel.hidden = NO;
+            //set timer
+            if (![self.messageTimersExistArray containsObject:messageItem.ID]){
+                
+                [self performSelector:@selector(messageIsInvalid:) withObject:messageItem.ID afterDelay:timerInterval];
+                [self.messageTimersExistArray addObject:messageItem.ID];
+            }
+           
+            //configurate timer label
+            [chatCell.timerLabel refreshTimer];
             [chatCell.timerLabel setCountDownTime:timerInterval];
             chatCell.timerLabel.timerType = MZTimerLabelTypeTimer;
             
-            __weak __typeof(self)weakSelf = self;
-            [chatCell.timerLabel startWithEndingBlock:^(NSTimeInterval countTime) {
-                [weakSelf messageTimerIsInvalid];
-                
-            }];
+            
+            chatCell.timerLabel.timeLabel.textColor = [UIColor blackColor];
+            chatCell.timerLabel.textAlignment = NSTextAlignmentRight;
+            [chatCell.timerLabel.timeLabel setFont:[UIFont systemFontOfSize:13]];
+            
+            
+            [chatCell.timerLabel  startWithEndingBlock:nil];
         } else {
             chatCell.timerLabel.endedBlock = nil;
-            chatCell.timerLabel.hidden = YES;
         }
     }
+}
+
+- (void) messageIsInvalid:(NSString*) messageID{
+    if([self.messageTimersExistArray containsObject:messageID]){
+        [self.messageTimersExistArray removeObject:messageID];
+        [self messageTimerIsInvalid];
+    }
+    
 }
 
 - (void) messageTimerIsInvalid{

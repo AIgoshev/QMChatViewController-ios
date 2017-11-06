@@ -418,4 +418,14 @@
     
 }
 
+
+-(void) refreshTimer{
+    self.timer = nil;
+    timeUserValue = 0;
+    startCountDate= nil;
+    pausedTime = nil;
+    timeToCountOff = nil;
+    self.endedBlock = nil;
+}
+
 @end

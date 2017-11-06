@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13156.6" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13137.5"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -62,14 +62,26 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DHC-rM-WtM" userLabel="Timer" customClass="MZTimerLabel">
+                                        <rect key="frame" x="0.0" y="72" width="165" height="0.0"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" id="5Cc-zV-S4l"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="DHC-rM-WtM" secondAttribute="trailing" id="2Fh-yd-eEA"/>
                                     <constraint firstItem="O1n-T7-9Dj" firstAttribute="height" secondItem="31P-0F-kOV" secondAttribute="height" constant="5" id="8PV-vS-rgG"/>
                                     <constraint firstItem="31P-0F-kOV" firstAttribute="top" secondItem="aUM-zm-5ky" secondAttribute="top" constant="10" id="GwE-rx-efF"/>
                                     <constraint firstItem="O1n-T7-9Dj" firstAttribute="centerY" secondItem="31P-0F-kOV" secondAttribute="centerY" id="NTL-lA-iuz"/>
                                     <constraint firstItem="31P-0F-kOV" firstAttribute="leading" secondItem="aUM-zm-5ky" secondAttribute="leading" constant="10" id="PBL-Yu-Epm"/>
                                     <constraint firstAttribute="bottom" secondItem="31P-0F-kOV" secondAttribute="bottom" constant="10" id="WhG-Y6-KVW"/>
+                                    <constraint firstItem="DHC-rM-WtM" firstAttribute="leading" secondItem="aUM-zm-5ky" secondAttribute="leading" id="ZST-6F-wnj"/>
+                                    <constraint firstAttribute="bottom" secondItem="DHC-rM-WtM" secondAttribute="bottom" id="qlf-RL-ThZ"/>
                                     <constraint firstItem="BVe-fz-bMy" firstAttribute="centerY" secondItem="aUM-zm-5ky" secondAttribute="centerY" id="tK2-3I-gmz"/>
                                     <constraint firstItem="BVe-fz-bMy" firstAttribute="leading" secondItem="31P-0F-kOV" secondAttribute="trailing" constant="8" id="voJ-bm-XAN"/>
                                     <constraint firstItem="O1n-T7-9Dj" firstAttribute="centerX" secondItem="31P-0F-kOV" secondAttribute="centerX" id="y6n-aM-NvT"/>
@@ -130,6 +142,8 @@
                 <outlet property="messageContainerLeftInsetConstraint" destination="hqh-sL-9vc" id="Qnp-A7-Ke0"/>
                 <outlet property="messageContainerTopInsetConstraint" destination="5b4-p7-Dki" id="ivg-8j-Kut"/>
                 <outlet property="progressView" destination="JUS-r0-nbo" id="3oc-06-fGk"/>
+                <outlet property="timerLabel" destination="DHC-rM-WtM" id="wsq-Vl-cHj"/>
+                <outlet property="timerLabelHeightConstraint" destination="5Cc-zV-S4l" id="VRp-WO-SHW"/>
             </connections>
             <point key="canvasLocation" x="-41.5" y="269.5"/>
         </collectionViewCell>

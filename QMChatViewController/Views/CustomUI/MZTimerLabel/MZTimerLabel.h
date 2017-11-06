@@ -125,6 +125,11 @@ typedef enum{
 - (NSTimeInterval)getCountDownTime;
 
 
+/*-------refresh*/
+
+-(void) refreshTimer;
+
+
 
 
 
