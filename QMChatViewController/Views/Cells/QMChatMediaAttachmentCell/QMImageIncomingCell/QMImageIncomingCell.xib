@@ -65,7 +65,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cPB-qF-r2j" userLabel="Timer" customClass="MZTimerLabel">
-                                        <rect key="frame" x="-9" y="194" width="166" height="0.0"/>
+                                        <rect key="frame" x="0.0" y="173" width="148" height="0.0"/>
                                         <constraints>
                                             <constraint firstAttribute="height" id="QxL-yR-M4j"/>
                                         </constraints>
@@ -84,20 +84,20 @@
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="cPB-qF-r2j" secondAttribute="trailing" id="0oq-9R-0Fe"/>
                                     <constraint firstAttribute="trailing" secondItem="PAF-cC-e9g" secondAttribute="trailing" id="3N9-wq-7ej"/>
                                     <constraint firstItem="VoV-NK-Opc" firstAttribute="centerY" secondItem="ukH-9J-jpb" secondAttribute="centerY" id="4Rt-mA-Wo7"/>
                                     <constraint firstItem="PAF-cC-e9g" firstAttribute="leading" secondItem="ukH-9J-jpb" secondAttribute="leading" id="8ZS-jd-7ix"/>
                                     <constraint firstItem="PAF-cC-e9g" firstAttribute="top" secondItem="ukH-9J-jpb" secondAttribute="top" id="AB7-oI-1vC"/>
+                                    <constraint firstItem="Zp3-vY-R3P" firstAttribute="top" secondItem="cPB-qF-r2j" secondAttribute="bottom" id="JSv-6f-yIl"/>
                                     <constraint firstItem="g9R-pB-Koi" firstAttribute="leading" secondItem="ukH-9J-jpb" secondAttribute="leading" id="Jgh-3f-NE1"/>
+                                    <constraint firstAttribute="bottom" secondItem="Zp3-vY-R3P" secondAttribute="bottom" id="Kwr-wk-hDD"/>
                                     <constraint firstAttribute="trailing" secondItem="g9R-pB-Koi" secondAttribute="trailing" id="USW-J4-Mak"/>
+                                    <constraint firstAttribute="trailing" secondItem="cPB-qF-r2j" secondAttribute="trailing" id="ZFq-0f-dJc"/>
                                     <constraint firstItem="Zp3-vY-R3P" firstAttribute="top" secondItem="g9R-pB-Koi" secondAttribute="bottom" id="Zx4-Gx-KBA"/>
-                                    <constraint firstAttribute="bottom" secondItem="cPB-qF-r2j" secondAttribute="bottom" id="cqv-6f-Qwe"/>
                                     <constraint firstItem="VoV-NK-Opc" firstAttribute="centerX" secondItem="ukH-9J-jpb" secondAttribute="centerX" id="g57-bg-v0X"/>
-                                    <constraint firstItem="cPB-qF-r2j" firstAttribute="top" secondItem="Zp3-vY-R3P" secondAttribute="bottom" id="ggZ-9q-kxq"/>
                                     <constraint firstItem="g9R-pB-Koi" firstAttribute="top" secondItem="PAF-cC-e9g" secondAttribute="bottom" id="ikv-cd-AlZ"/>
                                     <constraint firstAttribute="trailing" secondItem="Zp3-vY-R3P" secondAttribute="trailing" id="l4O-V8-fEE"/>
-                                    <constraint firstItem="cPB-qF-r2j" firstAttribute="leading" secondItem="ukH-9J-jpb" secondAttribute="leading" id="p2F-ka-6yY"/>
+                                    <constraint firstItem="cPB-qF-r2j" firstAttribute="leading" secondItem="ukH-9J-jpb" secondAttribute="leading" id="p4P-Su-Hqt"/>
                                     <constraint firstItem="Zp3-vY-R3P" firstAttribute="leading" secondItem="ukH-9J-jpb" secondAttribute="leading" id="w21-DS-5dl"/>
                                 </constraints>
                             </view>

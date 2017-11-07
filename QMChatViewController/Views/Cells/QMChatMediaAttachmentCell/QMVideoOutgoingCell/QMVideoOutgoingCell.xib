@@ -65,7 +65,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="imR-A9-Pvq" userLabel="Timer" customClass="MZTimerLabel">
-                                        <rect key="frame" x="-1" y="175" width="166" height="0.0"/>
+                                        <rect key="frame" x="0.0" y="140" width="165" height="0.0"/>
                                         <constraints>
                                             <constraint firstAttribute="height" id="iCW-gf-mPr"/>
                                         </constraints>
@@ -101,23 +101,23 @@
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="imR-A9-Pvq" secondAttribute="trailing" id="03b-Lp-8X2"/>
                                     <constraint firstItem="diF-ca-yd3" firstAttribute="leading" secondItem="aUM-zm-5ky" secondAttribute="leading" id="2GS-ez-PaZ"/>
                                     <constraint firstItem="OT0-Sd-Nzq" firstAttribute="centerY" secondItem="POB-ZI-etn" secondAttribute="centerY" id="2Sp-1H-5ZV"/>
                                     <constraint firstItem="diF-ca-yd3" firstAttribute="top" secondItem="aUM-zm-5ky" secondAttribute="top" id="2YG-PH-oBY"/>
                                     <constraint firstAttribute="trailing" secondItem="35y-FC-UxN" secondAttribute="trailing" id="AoC-SQ-Y4a"/>
-                                    <constraint firstAttribute="trailing" secondItem="imR-A9-Pvq" secondAttribute="trailing" id="BEF-5I-nGs"/>
                                     <constraint firstItem="OT0-Sd-Nzq" firstAttribute="centerX" secondItem="POB-ZI-etn" secondAttribute="centerX" id="BYN-fH-MuO"/>
                                     <constraint firstItem="Tve-03-DKT" firstAttribute="leading" secondItem="aUM-zm-5ky" secondAttribute="leading" id="Cu1-jT-1tl"/>
                                     <constraint firstItem="POB-ZI-etn" firstAttribute="centerX" secondItem="Tve-03-DKT" secondAttribute="centerX" id="NpL-XW-38g"/>
                                     <constraint firstItem="35y-FC-UxN" firstAttribute="top" secondItem="Tve-03-DKT" secondAttribute="bottom" id="QGP-lp-lfN"/>
-                                    <constraint firstItem="imR-A9-Pvq" firstAttribute="leading" secondItem="aUM-zm-5ky" secondAttribute="leading" id="Uac-lY-aD8"/>
+                                    <constraint firstItem="imR-A9-Pvq" firstAttribute="leading" secondItem="aUM-zm-5ky" secondAttribute="leading" id="SrF-aS-GVL"/>
                                     <constraint firstItem="35y-FC-UxN" firstAttribute="leading" secondItem="aUM-zm-5ky" secondAttribute="leading" id="Xda-1O-jom"/>
                                     <constraint firstItem="xux-6h-6al" firstAttribute="top" secondItem="Tve-03-DKT" secondAttribute="top" constant="2" id="YKQ-lW-bbD"/>
-                                    <constraint firstItem="imR-A9-Pvq" firstAttribute="top" secondItem="35y-FC-UxN" secondAttribute="bottom" id="hqh-By-5xD"/>
+                                    <constraint firstAttribute="bottom" secondItem="35y-FC-UxN" secondAttribute="bottom" id="dPw-Te-tzx"/>
+                                    <constraint firstItem="35y-FC-UxN" firstAttribute="top" secondItem="imR-A9-Pvq" secondAttribute="bottom" id="fJJ-R3-CKL"/>
                                     <constraint firstAttribute="trailing" secondItem="Tve-03-DKT" secondAttribute="trailing" id="nJl-Te-LvY"/>
                                     <constraint firstItem="POB-ZI-etn" firstAttribute="centerY" secondItem="Tve-03-DKT" secondAttribute="centerY" id="rdr-w2-4aU"/>
                                     <constraint firstAttribute="trailing" secondItem="diF-ca-yd3" secondAttribute="trailing" id="sf6-RH-gfz"/>
-                                    <constraint firstAttribute="bottom" secondItem="imR-A9-Pvq" secondAttribute="bottom" id="syp-as-24F"/>
                                     <constraint firstItem="Tve-03-DKT" firstAttribute="top" secondItem="diF-ca-yd3" secondAttribute="bottom" id="xs4-sc-NTj"/>
                                     <constraint firstItem="xux-6h-6al" firstAttribute="leading" secondItem="aUM-zm-5ky" secondAttribute="leading" constant="2" id="zuL-AR-8Ap"/>
                                 </constraints>

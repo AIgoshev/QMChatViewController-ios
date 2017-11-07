@@ -65,7 +65,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m4A-eA-f3Q" userLabel="Timer" customClass="MZTimerLabel">
-                                        <rect key="frame" x="-1" y="172" width="166" height="0.0"/>
+                                        <rect key="frame" x="0.0" y="140" width="165" height="0.0"/>
                                         <constraints>
                                             <constraint firstAttribute="height" id="80P-4p-YAa"/>
                                         </constraints>
@@ -92,22 +92,22 @@
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstItem="m4A-eA-f3Q" firstAttribute="top" secondItem="35y-FC-UxN" secondAttribute="bottom" id="1ay-Ik-JbI"/>
                                     <constraint firstItem="diF-ca-yd3" firstAttribute="leading" secondItem="aUM-zm-5ky" secondAttribute="leading" id="2GS-ez-PaZ"/>
                                     <constraint firstItem="diF-ca-yd3" firstAttribute="top" secondItem="aUM-zm-5ky" secondAttribute="top" id="2YG-PH-oBY"/>
                                     <constraint firstItem="8hp-L6-yUX" firstAttribute="centerX" secondItem="OT0-Sd-Nzq" secondAttribute="centerX" id="4Cf-sz-Eco"/>
                                     <constraint firstAttribute="trailing" secondItem="35y-FC-UxN" secondAttribute="trailing" id="AoC-SQ-Y4a"/>
-                                    <constraint firstAttribute="trailing" secondItem="m4A-eA-f3Q" secondAttribute="trailing" id="BGo-6j-VgT"/>
                                     <constraint firstItem="Tve-03-DKT" firstAttribute="leading" secondItem="aUM-zm-5ky" secondAttribute="leading" id="Cu1-jT-1tl"/>
                                     <constraint firstItem="OT0-Sd-Nzq" firstAttribute="centerY" secondItem="aUM-zm-5ky" secondAttribute="centerY" id="IPa-vb-tRC"/>
-                                    <constraint firstAttribute="bottom" secondItem="m4A-eA-f3Q" secondAttribute="bottom" id="MTb-zv-f63"/>
+                                    <constraint firstAttribute="bottom" secondItem="35y-FC-UxN" secondAttribute="bottom" id="Lmc-dU-6oy"/>
                                     <constraint firstItem="35y-FC-UxN" firstAttribute="top" secondItem="Tve-03-DKT" secondAttribute="bottom" id="QGP-lp-lfN"/>
                                     <constraint firstItem="35y-FC-UxN" firstAttribute="leading" secondItem="aUM-zm-5ky" secondAttribute="leading" id="Xda-1O-jom"/>
                                     <constraint firstItem="8hp-L6-yUX" firstAttribute="centerY" secondItem="OT0-Sd-Nzq" secondAttribute="centerY" id="ZXi-bT-u38"/>
+                                    <constraint firstItem="m4A-eA-f3Q" firstAttribute="leading" secondItem="aUM-zm-5ky" secondAttribute="leading" id="ehy-WI-25W"/>
                                     <constraint firstItem="OT0-Sd-Nzq" firstAttribute="centerX" secondItem="aUM-zm-5ky" secondAttribute="centerX" id="jvw-zB-F9E"/>
+                                    <constraint firstItem="35y-FC-UxN" firstAttribute="top" secondItem="m4A-eA-f3Q" secondAttribute="bottom" id="kzw-qm-1Dc"/>
                                     <constraint firstAttribute="trailing" secondItem="Tve-03-DKT" secondAttribute="trailing" id="nJl-Te-LvY"/>
                                     <constraint firstAttribute="trailing" secondItem="diF-ca-yd3" secondAttribute="trailing" id="sf6-RH-gfz"/>
-                                    <constraint firstItem="m4A-eA-f3Q" firstAttribute="leading" secondItem="aUM-zm-5ky" secondAttribute="leading" id="ugr-wa-NyY"/>
+                                    <constraint firstAttribute="trailing" secondItem="m4A-eA-f3Q" secondAttribute="trailing" id="vac-Hv-1WD"/>
                                     <constraint firstItem="Tve-03-DKT" firstAttribute="top" secondItem="diF-ca-yd3" secondAttribute="bottom" id="xs4-sc-NTj"/>
                                 </constraints>
                             </view>
