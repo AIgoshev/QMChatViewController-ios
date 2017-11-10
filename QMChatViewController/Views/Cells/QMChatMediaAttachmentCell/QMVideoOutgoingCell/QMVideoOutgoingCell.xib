@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13156.6" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13137.5"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -110,14 +110,24 @@
                                     <constraint firstItem="xux-6h-6al" firstAttribute="leading" secondItem="aUM-zm-5ky" secondAttribute="leading" constant="2" id="zuL-AR-8Ap"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ov9-Xd-ESn" userLabel="HiddenButton">
+                                <rect key="frame" x="0.0" y="0.0" width="181" height="183"/>
+                                <connections>
+                                    <action selector="hiddenButtonAction:" destination="vDG-KF-S8V" eventType="touchUpInside" id="3DW-7U-1la"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="aUM-zm-5ky" secondAttribute="bottom" constant="4" id="5Sz-rW-mKf"/>
                             <constraint firstItem="aUM-zm-5ky" firstAttribute="top" secondItem="mlp-Ig-WT7" secondAttribute="top" constant="4" id="5b4-p7-Dki"/>
                             <constraint firstAttribute="trailing" secondItem="aUM-zm-5ky" secondAttribute="trailing" constant="12" id="FuO-6F-2wi"/>
+                            <constraint firstAttribute="bottom" secondItem="Ov9-Xd-ESn" secondAttribute="bottom" id="WWs-ga-Bud"/>
+                            <constraint firstAttribute="trailing" secondItem="Ov9-Xd-ESn" secondAttribute="trailing" id="bYC-Np-PZ4"/>
                             <constraint firstItem="aUM-zm-5ky" firstAttribute="leading" secondItem="mlp-Ig-WT7" secondAttribute="leading" constant="4" id="hqh-sL-9vc"/>
                             <constraint firstAttribute="width" constant="181" id="jtP-rm-saS"/>
+                            <constraint firstItem="Ov9-Xd-ESn" firstAttribute="top" secondItem="mlp-Ig-WT7" secondAttribute="top" id="w8f-s2-SnB"/>
+                            <constraint firstItem="Ov9-Xd-ESn" firstAttribute="leading" secondItem="mlp-Ig-WT7" secondAttribute="leading" id="xon-Dj-Ny8"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="color" keyPath="bgColor">
@@ -156,6 +166,7 @@
                 <outlet property="containerView" destination="mlp-Ig-WT7" id="k8m-rd-Dhd"/>
                 <outlet property="containerWidthConstraint" destination="jtP-rm-saS" id="9Rs-pi-upC"/>
                 <outlet property="durationLabel" destination="xux-6h-6al" id="9cb-x0-Mva"/>
+                <outlet property="hiddenContainerButton" destination="Ov9-Xd-ESn" id="C0d-SZ-o8z"/>
                 <outlet property="mediaPlayButton" destination="POB-ZI-etn" id="VRj-gL-HH0"/>
                 <outlet property="messageContainer" destination="aUM-zm-5ky" id="rie-RC-nhS"/>
                 <outlet property="messageContainerBottomInsetConstraint" destination="5Sz-rW-mKf" id="DmH-WT-ifj"/>

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13156.6" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13137.5"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -76,14 +76,24 @@
                                     <constraint firstItem="gk1-lu-SnH" firstAttribute="centerY" secondItem="M97-gl-Mul" secondAttribute="centerY" id="nva-Ap-u5z"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Hs-7o-Z6z" userLabel="hiddenButton">
+                                <rect key="frame" x="0.0" y="0.0" width="163" height="60"/>
+                                <connections>
+                                    <action selector="hiddenButtonAction:" destination="gZD-h7-m4h" eventType="touchUpInside" id="IoL-ux-KZe"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="h0t-IR-BXe" firstAttribute="centerX" secondItem="X4d-J3-f3R" secondAttribute="centerX" id="Fga-0M-ye0"/>
                             <constraint firstItem="1rv-oZ-ov9" firstAttribute="top" secondItem="X4d-J3-f3R" secondAttribute="top" constant="4" id="JYn-ad-AzN"/>
+                            <constraint firstItem="4Hs-7o-Z6z" firstAttribute="top" secondItem="X4d-J3-f3R" secondAttribute="top" id="Lw8-y8-MgE"/>
                             <constraint firstItem="h0t-IR-BXe" firstAttribute="centerY" secondItem="X4d-J3-f3R" secondAttribute="centerY" id="Ovu-6k-Uyk"/>
                             <constraint firstItem="h0t-IR-BXe" firstAttribute="height" secondItem="X4d-J3-f3R" secondAttribute="height" id="W2U-Zp-ydj"/>
+                            <constraint firstItem="4Hs-7o-Z6z" firstAttribute="leading" secondItem="X4d-J3-f3R" secondAttribute="leading" id="cua-xq-Nem"/>
                             <constraint firstItem="1rv-oZ-ov9" firstAttribute="leading" secondItem="X4d-J3-f3R" secondAttribute="leading" constant="12" id="gxE-or-oXB"/>
+                            <constraint firstAttribute="bottom" secondItem="4Hs-7o-Z6z" secondAttribute="bottom" id="j1S-bi-e4J"/>
+                            <constraint firstAttribute="trailing" secondItem="4Hs-7o-Z6z" secondAttribute="trailing" id="p8G-fM-VoI"/>
                             <constraint firstAttribute="width" constant="163" id="q3d-xO-tGz"/>
                             <constraint firstAttribute="trailing" secondItem="1rv-oZ-ov9" secondAttribute="trailing" constant="4" id="tJS-yu-Sgw"/>
                             <constraint firstAttribute="bottom" secondItem="1rv-oZ-ov9" secondAttribute="bottom" constant="4" id="uq1-a3-hdy"/>
@@ -124,6 +134,7 @@
                 <outlet property="containerView" destination="X4d-J3-f3R" id="PGD-cW-pr4"/>
                 <outlet property="containerWidthConstraint" destination="q3d-xO-tGz" id="VmK-ch-bod"/>
                 <outlet property="durationLabel" destination="63N-iB-WUW" id="wQk-4t-OXh"/>
+                <outlet property="hiddenContainerButton" destination="4Hs-7o-Z6z" id="dWY-yh-WEL"/>
                 <outlet property="mediaPlayButton" destination="M97-gl-Mul" id="KKu-Uc-OMa"/>
                 <outlet property="messageContainer" destination="1rv-oZ-ov9" id="RQK-Dd-jIf"/>
                 <outlet property="messageContainerBottomInsetConstraint" destination="uq1-a3-hdy" id="M9y-ZL-Eba"/>

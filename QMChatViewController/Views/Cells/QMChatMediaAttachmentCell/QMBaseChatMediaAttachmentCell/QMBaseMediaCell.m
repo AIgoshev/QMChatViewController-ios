@@ -52,6 +52,7 @@
 @synthesize thumbnailImage = _thumbnailImage;
 @synthesize cancellable = _cancellable;
 @synthesize playable = _playable;
+@synthesize hiddenImage = _hiddenImage;
 
 - (void)awakeFromNib {
     
@@ -158,6 +159,22 @@
     
     self.previewImageView.image = image;
     [self.previewImageView setNeedsLayout];
+}
+
+- (void)setHiddenImage:(UIImage *)hiddenImage {
+    _hiddenImage = hiddenImage;
+    
+    if(hiddenImage){
+        [self.hiddenContainerButton setHidden:NO];
+        [self.hiddenContainerButton setBackgroundImage:hiddenImage forState:UIControlStateNormal];
+//        [self.hiddenContainerButton setImage:hiddenImage forState:UIControlStateNormal];
+    }else{
+        [self.hiddenContainerButton setHidden:YES];
+    }
+}
+
+-(IBAction)hiddenButtonAction:(id)sender {
+    [self.mediaHandler didTapHiddenButton:self];
 }
 
 

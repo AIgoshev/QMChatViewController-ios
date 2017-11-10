@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13156.6" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13137.5"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -76,15 +76,25 @@
                                     <constraint firstItem="O1n-T7-9Dj" firstAttribute="width" secondItem="31P-0F-kOV" secondAttribute="width" constant="5" id="yRa-me-NdY"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BfR-Iu-I95" userLabel="HiddenButton">
+                                <rect key="frame" x="0.0" y="0.0" width="181" height="80"/>
+                                <connections>
+                                    <action selector="hiddenButtonAction:" destination="vDG-KF-S8V" eventType="touchUpInside" id="b1E-NV-UEA"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="BfR-Iu-I95" secondAttribute="trailing" id="1AI-C0-jLU"/>
                             <constraint firstAttribute="bottom" secondItem="aUM-zm-5ky" secondAttribute="bottom" constant="4" id="5Sz-rW-mKf"/>
                             <constraint firstItem="aUM-zm-5ky" firstAttribute="top" secondItem="mlp-Ig-WT7" secondAttribute="top" constant="4" id="5b4-p7-Dki"/>
+                            <constraint firstAttribute="bottom" secondItem="BfR-Iu-I95" secondAttribute="bottom" id="6Uw-Bs-jSI"/>
+                            <constraint firstItem="BfR-Iu-I95" firstAttribute="leading" secondItem="mlp-Ig-WT7" secondAttribute="leading" id="83y-U1-gDy"/>
                             <constraint firstAttribute="trailing" secondItem="aUM-zm-5ky" secondAttribute="trailing" constant="12" id="FuO-6F-2wi"/>
                             <constraint firstItem="JUS-r0-nbo" firstAttribute="height" secondItem="mlp-Ig-WT7" secondAttribute="height" id="Gtu-Pm-9i3"/>
                             <constraint firstItem="JUS-r0-nbo" firstAttribute="centerY" secondItem="mlp-Ig-WT7" secondAttribute="centerY" id="QjF-xa-DW0"/>
                             <constraint firstItem="JUS-r0-nbo" firstAttribute="centerX" secondItem="mlp-Ig-WT7" secondAttribute="centerX" id="RyO-jZ-Bo8"/>
+                            <constraint firstItem="BfR-Iu-I95" firstAttribute="top" secondItem="mlp-Ig-WT7" secondAttribute="top" id="d4t-wk-Xcu"/>
                             <constraint firstItem="aUM-zm-5ky" firstAttribute="leading" secondItem="mlp-Ig-WT7" secondAttribute="leading" constant="4" id="hqh-sL-9vc"/>
                             <constraint firstAttribute="width" constant="181" id="jtP-rm-saS"/>
                             <constraint firstItem="JUS-r0-nbo" firstAttribute="width" secondItem="mlp-Ig-WT7" secondAttribute="width" id="qEW-55-AKD"/>
@@ -124,6 +134,7 @@
                 <outlet property="containerView" destination="mlp-Ig-WT7" id="k8m-rd-Dhd"/>
                 <outlet property="containerWidthConstraint" destination="jtP-rm-saS" id="9Rs-pi-upC"/>
                 <outlet property="durationLabel" destination="BVe-fz-bMy" id="h1X-eT-Ryg"/>
+                <outlet property="hiddenContainerButton" destination="BfR-Iu-I95" id="n2h-eU-IKH"/>
                 <outlet property="mediaPlayButton" destination="31P-0F-kOV" id="IB9-at-C1l"/>
                 <outlet property="messageContainer" destination="aUM-zm-5ky" id="rie-RC-nhS"/>
                 <outlet property="messageContainerBottomInsetConstraint" destination="5Sz-rW-mKf" id="DmH-WT-ifj"/>

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13156.6" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13137.5"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -99,12 +99,22 @@
                                     <constraint firstItem="Tve-03-DKT" firstAttribute="top" secondItem="diF-ca-yd3" secondAttribute="bottom" id="xs4-sc-NTj"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LDn-h8-dae" userLabel="HiddenButton">
+                                <rect key="frame" x="0.0" y="0.0" width="180" height="180"/>
+                                <connections>
+                                    <action selector="hiddenButtonAction:" destination="vDG-KF-S8V" eventType="touchUpInside" id="Etw-Ob-0Ha"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="aUM-zm-5ky" secondAttribute="bottom" constant="4" id="5Sz-rW-mKf"/>
                             <constraint firstItem="aUM-zm-5ky" firstAttribute="top" secondItem="mlp-Ig-WT7" secondAttribute="top" constant="4" id="5b4-p7-Dki"/>
+                            <constraint firstAttribute="bottom" secondItem="LDn-h8-dae" secondAttribute="bottom" id="9rz-VZ-MYF"/>
+                            <constraint firstItem="LDn-h8-dae" firstAttribute="leading" secondItem="mlp-Ig-WT7" secondAttribute="leading" id="ARs-8h-adc"/>
+                            <constraint firstItem="LDn-h8-dae" firstAttribute="top" secondItem="mlp-Ig-WT7" secondAttribute="top" id="DvT-Rp-fCd"/>
                             <constraint firstAttribute="trailing" secondItem="aUM-zm-5ky" secondAttribute="trailing" constant="11" id="FuO-6F-2wi"/>
+                            <constraint firstAttribute="trailing" secondItem="LDn-h8-dae" secondAttribute="trailing" id="U5I-il-IHN"/>
                             <constraint firstItem="aUM-zm-5ky" firstAttribute="leading" secondItem="mlp-Ig-WT7" secondAttribute="leading" constant="4" id="hqh-sL-9vc"/>
                             <constraint firstAttribute="width" constant="180" id="jtP-rm-saS"/>
                         </constraints>
@@ -144,6 +154,7 @@
                 <outlet property="circularProgress" destination="OT0-Sd-Nzq" id="Pix-sZ-LKK"/>
                 <outlet property="containerView" destination="mlp-Ig-WT7" id="k8m-rd-Dhd"/>
                 <outlet property="containerWidthConstraint" destination="jtP-rm-saS" id="9Rs-pi-upC"/>
+                <outlet property="hiddenContainerButton" destination="LDn-h8-dae" id="shp-Fc-mjC"/>
                 <outlet property="mediaPlayButton" destination="8hp-L6-yUX" id="R8a-td-kpf"/>
                 <outlet property="messageContainer" destination="aUM-zm-5ky" id="rie-RC-nhS"/>
                 <outlet property="messageContainerBottomInsetConstraint" destination="5Sz-rW-mKf" id="DmH-WT-ifj"/>

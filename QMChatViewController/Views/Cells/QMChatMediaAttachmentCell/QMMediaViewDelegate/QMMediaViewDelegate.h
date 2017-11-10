@@ -84,6 +84,11 @@ typedef NS_ENUM(NSInteger, QMMediaViewState) {
 @property (nonatomic, strong) UIImage *image;
 
 /**
+ * set image over container view
+ */
+@property (nonatomic, strong) UIImage* hiddenImage;
+
+/**
  Tells the delegate that the error has been occured.
  
  @param error The instance of NSError.
@@ -107,5 +112,13 @@ typedef NS_ENUM(NSInteger, QMMediaViewState) {
  @param view Instance that adopts id<QMMediaViewDelegate>.
  */
 - (void)didTapMediaButton:(id<QMMediaViewDelegate>)view;
+
+
+/**
+ * Tells the delegate that the hidden button over container has been tapped.
+ *  @param view Instance that adopts id<QMMediaViewDelegate>.
+ *
+ */
+- (void)didTapHiddenButton:(id<QMMediaViewDelegate>)view;
 
 @end

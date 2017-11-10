@@ -25,6 +25,7 @@
 @property (nonatomic, weak) IBOutlet UIButton *mediaPlayButton;
 @property (nonatomic, weak) IBOutlet UILabel *durationLabel;
 @property (nonatomic, weak) IBOutlet FFCircularProgressView *circularProgress;
+@property (nonatomic, weak) IBOutlet UIButton *hiddenContainerButton;
 
 - (NSString *)timestampString:(NSTimeInterval)currentTime
                   forDuration:(NSTimeInterval)duration;
