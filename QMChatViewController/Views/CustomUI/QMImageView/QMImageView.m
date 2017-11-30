@@ -297,6 +297,23 @@ static NSArray *qm_colors = nil;
     
     self.image = placehoder;
     
+    CGSize targetSize = self.bounds.size;
+    QMImageTransformType type = self.imageViewType == QMImageViewTypeCircle ?  QMImageTransformTypeCircle : QMImageTransformTypeCustom;
+    QMImageTransform *transform;
+    if (type == QMImageTransformTypeCircle)
+        transform =
+        [QMImageTransform transformWithType:type size:targetSize];
+    
+    else if (type == QMImageTransformTypeCustom) {
+        
+        transform =
+        [QMImageTransform transformWithSize:targetSize
+                       customTransformBlock:^UIImage *(NSURL *imageURL, UIImage *originalImage) {
+                           return [originalImage imageWithCornerRadius:4.0 targetSize:targetSize];
+                       }];
+    }
+    
+    
     if (urlIsValid) {
         
         __weak __typeof(self)weakSelf = self;
@@ -304,7 +321,7 @@ static NSArray *qm_colors = nil;
         id <SDWebImageOperation> operation =
         [[QMImageLoader instance]
          downloadImageWithURL:url
-         transform:nil
+         transform:transform
          options:options
          progress:nil
          completed:
