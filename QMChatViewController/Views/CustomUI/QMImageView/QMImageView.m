@@ -177,6 +177,13 @@ static NSArray *qm_colors = nil;
 
 //MARK: - Public interface
 
+- (void)applyImage:(UIImage *)image {
+    __weak __typeof(self)weakSelf = self;
+    weakSelf.textLayer.hidden = YES;
+    
+    weakSelf.image = image;
+    [weakSelf setNeedsLayout];
+}
 - (UIImage *)originalImage {
     return self.image;
 }
@@ -297,25 +304,24 @@ static NSArray *qm_colors = nil;
     
     self.image = placehoder;
     
-    CGSize targetSize = self.bounds.size;
-    QMImageTransformType type = self.imageViewType == QMImageViewTypeCircle ?  QMImageTransformTypeCircle : QMImageTransformTypeCustom;
-    QMImageTransform *transform;
-    if (type == QMImageTransformTypeCircle)
-        transform =
-        [QMImageTransform transformWithType:type size:targetSize];
-    
-    else if (type == QMImageTransformTypeCustom) {
-        
-        transform =
-        [QMImageTransform transformWithSize:targetSize
-                       customTransformBlock:^UIImage *(NSURL *imageURL, UIImage *originalImage) {
-                           return [originalImage imageWithCornerRadius:4.0 targetSize:targetSize];
-                       }];
-    }
     
     
     if (urlIsValid) {
         
+        CGSize targetSize = self.bounds.size;
+        QMImageTransformType type = self.imageViewType == QMImageViewTypeCircle ?  QMImageTransformTypeCircle : QMImageTransformTypeCustom;
+        QMImageTransform *transform;
+        if (type == QMImageTransformTypeCircle)
+            transform =
+            [QMImageTransform transformWithType:type size:targetSize];
+        else if (type == QMImageTransformTypeCustom) {
+        
+            transform =
+            [QMImageTransform transformWithSize:targetSize
+                           customTransformBlock:^UIImage *(NSURL *imageURL, UIImage *originalImage) {
+                               return [originalImage imageWithCornerRadius:4.0 targetSize:targetSize];
+                           }];
+        }
         __weak __typeof(self)weakSelf = self;
         
         id <SDWebImageOperation> operation =
@@ -332,7 +338,10 @@ static NSArray *qm_colors = nil;
              
              if (!error) {
                  
-                 if (image) {
+                 if (transfomedImage) {
+                     weakSelf.image = transfomedImage;
+                     [weakSelf setNeedsLayout];
+                 } else if (image) {
                      weakSelf.image = image;
                      [weakSelf setNeedsLayout];
                  }

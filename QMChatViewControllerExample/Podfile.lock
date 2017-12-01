@@ -10,46 +10,38 @@ PODS:
     - QMCVDevelopment/Utils (= 0.5.1)
     - QMCVDevelopment/ViewModels (= 0.5.1)
     - QMCVDevelopment/Views (= 0.5.1)
-    - QuickBlox (>= 2.10)
     - SDWebImage
     - TTTAttributedLabel
   - QMCVDevelopment/Categories (0.5.1):
     - FFCircularProgressView
     - QMCVDevelopment/QMChatLocationSnapshotter
-    - QuickBlox (>= 2.10)
     - SDWebImage
     - TTTAttributedLabel
   - QMCVDevelopment/Protocols (0.5.1):
     - FFCircularProgressView
-    - QuickBlox (>= 2.10)
     - SDWebImage
     - TTTAttributedLabel
   - QMCVDevelopment/QMChatDataSource (0.5.1):
     - FFCircularProgressView
-    - QuickBlox (>= 2.10)
     - SDWebImage
     - TTTAttributedLabel
   - QMCVDevelopment/QMChatLocationSnapshotter (0.5.1):
     - FFCircularProgressView
-    - QuickBlox (>= 2.10)
     - SDWebImage
     - TTTAttributedLabel
   - QMCVDevelopment/Sections (0.5.1):
     - FFCircularProgressView
     - QMCVDevelopment/QMChatDataSource
-    - QuickBlox (>= 2.10)
     - SDWebImage
     - TTTAttributedLabel
   - QMCVDevelopment/Utils (0.5.1):
     - FFCircularProgressView
     - QMCVDevelopment/Categories
-    - QuickBlox (>= 2.10)
     - SDWebImage
     - TTTAttributedLabel
   - QMCVDevelopment/ViewModels (0.5.1):
     - FFCircularProgressView
     - QMCVDevelopment/Categories
-    - QuickBlox (>= 2.10)
     - SDWebImage
     - TTTAttributedLabel
   - QMCVDevelopment/Views (0.5.1):
@@ -57,10 +49,8 @@ PODS:
     - QMCVDevelopment/Categories
     - QMCVDevelopment/Protocols
     - QMCVDevelopment/Utils
-    - QuickBlox (>= 2.10)
     - SDWebImage
     - TTTAttributedLabel
-  - QuickBlox (2.12)
   - SDWebImage (4.1.0):
     - SDWebImage/Core (= 4.1.0)
   - SDWebImage/Core (4.1.0)
@@ -75,11 +65,10 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   FFCircularProgressView: 683a4ab1e1bd613246a3dffa61503ffdebcde8d8
-  QMCVDevelopment: aef932a94df27885f1d4ef140f0b943d0c4e8c67
-  QuickBlox: 5c0b21dc44a94e4ffb2e8b8eb2db606a635d1931
+  QMCVDevelopment: f459cc40e4dce463d7fd9092504e9a9aa49aa7a8
   SDWebImage: 0e435c14e402a6730315a0fb79f95e68654d55a4
   TTTAttributedLabel: 8cffe8e127e4e82ff3af1e5386d4cd0ad000b656
 
 PODFILE CHECKSUM: c95105ef6ff4206fec93cbeb3774097cd54f595f
 
-COCOAPODS: 1.3.1
+COCOAPODS: 1.4.0.beta.2
