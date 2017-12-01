@@ -181,7 +181,11 @@ static NSArray *qm_colors = nil;
     __weak __typeof(self)weakSelf = self;
     weakSelf.textLayer.hidden = YES;
     
-    weakSelf.image = image;
+    QMImageTransform *transform  = [QMImageTransform transformWithType:QMImageTransformTypeCircle size:image.size];
+    [transform applyTransformForImage:image
+                      completionBlock:^(UIImage * _Nonnull transformedImage) {
+                          weakSelf.image = transformedImage;
+                      }];
     [weakSelf setNeedsLayout];
 }
 - (UIImage *)originalImage {
