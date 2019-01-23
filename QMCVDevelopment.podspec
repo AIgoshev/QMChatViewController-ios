@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "QMCVDevelopment"
-  s.version      = "0.5.1"
+  s.version      = "1.0.1"
   s.summary      = "An elegant ready-to-go chat view controller for iOS chat applications that use Quickblox communication backend."
 
   s.description  = <<-DESC
@@ -23,11 +23,14 @@ Pod::Spec.new do |s|
   * Auto Layout inside.
   DESC
 
-  s.homepage     = "https://github.com/QuickBlox/QMChatViewController-ios"
+  s.homepage = "https://github.com/ConnectyCube/ios-chat-view-controller"
   s.license      = { :type => "BSD", :file => "LICENSE" }
-  s.authors      = {"Andrey Ivanov" => "andrey.ivanov@quickblox.com", "Vitaliy Gorbachov" => "vitaliy.gorbachov@quickblox.com", "Vitaliy Gurkovsky" => "vitaliy.gurkovsky@injoit.com"}
+  s.authors = { "ConnectyCube Team" => "support@connectycube.com"}
   s.platform     = :ios, "8.0"
-  s.source       = { :git => "https://github.com/QuickBlox/QMChatViewController-ios.git", :tag => "#{s.version}" }
+  s.source = {
+        :git => "https://github.com/ConnectyCube/ios-chat-view-controller.git",
+        :tag => "#{s.version}"
+    }  
   s.source_files = "QMChatViewController/QMChatViewController.{h,m}"
   s.xcconfig            = {"FRAMEWORK_SEARCH_PATHS" => "$(PODS_ROOT)/../../Framework $(PODS_ROOT)/../External"}
 

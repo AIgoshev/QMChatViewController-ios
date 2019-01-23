@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <Quickblox/Quickblox.h>
+#import <ConnectyCube/ConnectyCube.h>
 
 
 @class QMPlaceHolderTextView;

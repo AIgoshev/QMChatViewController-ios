@@ -7,9 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <Quickblox/Quickblox.h>
+#import <ConnectyCube/ConnectyCube.h>
 
-#import "QBChatMessage+QBDateDivider.h"
+#import "CYBChatMessage+CYBDateDivider.h"
 
 typedef NS_ENUM(NSInteger, QMDataSourceActionType) {
     
@@ -18,7 +18,7 @@ typedef NS_ENUM(NSInteger, QMDataSourceActionType) {
     QMDataSourceActionTypeRemove
 };
 
-@class QBChatMessage;
+@class CYBChatMessage;
 
 @protocol QMChatDataSourceDelegate;
 
@@ -40,14 +40,14 @@ typedef NS_ENUM(NSInteger, QMDataSourceActionType) {
 
 - (NSArray *)allMessages;
 
-- (void)addMessage:(QBChatMessage *)message;
-- (void)addMessages:(NSArray<QBChatMessage *> *)messages;
+- (void)addMessage:(CYBChatMessage *)message;
+- (void)addMessages:(NSArray<CYBChatMessage *> *)messages;
 
-- (void)deleteMessage:(QBChatMessage *)message;
-- (void)deleteMessages:(NSArray <QBChatMessage *> *)messages;
+- (void)deleteMessage:(CYBChatMessage *)message;
+- (void)deleteMessages:(NSArray <CYBChatMessage *> *)messages;
 
-- (void)updateMessage:(QBChatMessage *)message;
-- (void)updateMessages:(NSArray <QBChatMessage *> *)messages;
+- (void)updateMessage:(CYBChatMessage *)message;
+- (void)updateMessages:(NSArray <CYBChatMessage *> *)messages;
 
 - (NSArray *)performChangesWithMessages:(NSArray *)messages updateType:(QMDataSourceActionType)updateType;
 
@@ -65,7 +65,7 @@ typedef NS_ENUM(NSInteger, QMDataSourceActionType) {
  *
  *  @return QBChatMessage instance that conforms to indexPath
  */
-- (QBChatMessage *)messageForIndexPath:(NSIndexPath *)indexPath;
+- (CYBChatMessage *)messageForIndexPath:(NSIndexPath *)indexPath;
 
 /**
  *  Index path for message.
@@ -74,7 +74,7 @@ typedef NS_ENUM(NSInteger, QMDataSourceActionType) {
  *
  *  @return NSIndexPath instance that conforms message or nil if not found
  */
-- (NSIndexPath *)indexPathForMessage:(QBChatMessage *)message;
+- (NSIndexPath *)indexPathForMessage:(CYBChatMessage *)message;
 
 /**
  *  Returns a Boolean value that indicates whether a message is present in the data source.
@@ -83,7 +83,7 @@ typedef NS_ENUM(NSInteger, QMDataSourceActionType) {
  *
  *  @return YES if message is present in the data source, otherwise NO.
  */
-- (BOOL)messageExists:(QBChatMessage *)message;
+- (BOOL)messageExists:(CYBChatMessage *)message;
 
 @end
 

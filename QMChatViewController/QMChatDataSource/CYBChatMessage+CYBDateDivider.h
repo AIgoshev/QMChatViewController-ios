@@ -6,9 +6,9 @@
 //  Copyright © 2016 Quickblox. All rights reserved.
 //
 
-#import <Quickblox/Quickblox.h>
+#import <ConnectyCube/ConnectyCube.h>
 
-@interface QBChatMessage (QBDateDivider)
+@interface CYBChatMessage (CYBDateDivider)
 
 @property (assign, nonatomic) BOOL isDateDividerMessage;
 

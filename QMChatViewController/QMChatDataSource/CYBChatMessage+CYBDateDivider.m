@@ -6,17 +6,17 @@
 //  Copyright © 2016 Quickblox. All rights reserved.
 //
 
-#import "QBChatMessage+QBDateDivider.h"
+#import "CYBChatMessage+CYBDateDivider.h"
 
 NSString const *kQBDateDividerCustomParameterKey = @"kQBDateDividerCustomParameterKey";
 
-@interface QBChatMessage ()
+@interface CYBChatMessage ()
 
 @property (strong, nonatomic) NSMutableDictionary *context;
 
 @end
 
-@implementation QBChatMessage (QBDateDivider)
+@implementation CYBChatMessage (CYBDateDivider)
 @dynamic isDateDividerMessage;
 
 //MARK: - Context
@@ -25,7 +25,7 @@ NSString const *kQBDateDividerCustomParameterKey = @"kQBDateDividerCustomParamet
     
     if (!self.customParameters) {
         
-        self.customParameters = [NSMutableDictionary dictionary];
+       // self.customParameters = [NSMutableDictionary dictionary];
     }
     
     return self.customParameters;

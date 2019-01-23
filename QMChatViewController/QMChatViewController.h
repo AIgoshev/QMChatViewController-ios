@@ -13,7 +13,7 @@
 #import "QMChatCollectionViewFlowLayout.h"
 #import "QMChatActionsHandler.h"
 #import "QMInputToolbar.h"
-#import <Quickblox/Quickblox.h>
+#import <ConnectyCube/ConnectyCube.h>
 
 #import "QMChatContactRequestCell.h"
 #import "QMChatIncomingCell.h"
@@ -111,7 +111,7 @@
  *
  *  @return Configured attributed string.
  */
-- (NSAttributedString *)attributedStringForItem:(QBChatMessage *)messageItem;
+- (NSAttributedString *)attributedStringForItem:(CYBChatMessage *)messageItem;
 
 /**
  *  Method to create chat message top label attributed string (Usually - chat message owner name). Have to be overriden in subclasses.
@@ -120,7 +120,7 @@
  *
  *  @return Configured attributed string.
  */
-- (NSAttributedString *)topLabelAttributedStringForItem:(QBChatMessage *)messageItem;
+- (NSAttributedString *)topLabelAttributedStringForItem:(CYBChatMessage *)messageItem;
 
 /**
  *  Method to create chat message bottom label attributed string (Usually - chat message date sent). Have to be overriden in subclasses.
@@ -129,7 +129,7 @@
  *
  *  @return Configured attributed string.
  */
-- (NSAttributedString *)bottomLabelAttributedStringForItem:(QBChatMessage *)messageItem;
+- (NSAttributedString *)bottomLabelAttributedStringForItem:(CYBChatMessage *)messageItem;
 
 /**
  *  Collection Cell View class for specific message. Have to be overriden in subclasses. Defaults cells are supplied with QMChatViewController.
@@ -138,7 +138,7 @@
  *
  *  @return Collection Cell View Class
  */
-- (Class)viewClassForItem:(QBChatMessage *)item;
+- (Class)viewClassForItem:(CYBChatMessage *)item;
 
 - (void)collectionView:(QMChatCollectionView *)collectionView configureCell:(UICollectionViewCell *)cell forIndexPath:(NSIndexPath *)indexPath;
 

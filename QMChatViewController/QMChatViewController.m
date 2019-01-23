@@ -494,7 +494,7 @@ UIAlertViewDelegate, QMChatDataSourceDelegate>
 - (UICollectionViewCell *)collectionView:(QMChatCollectionView *)collectionView
                   cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     
-    QBChatMessage *messageItem =
+    CYBChatMessage *messageItem =
     [self.chatDataSource messageForIndexPath:indexPath];
     
     Class class = [self viewClassForItem:messageItem];
@@ -519,7 +519,7 @@ UIAlertViewDelegate, QMChatDataSourceDelegate>
         contactRequestCell.actionsHandler = self.actionsHandler;
     }
     
-    QBChatMessage *messageItem = [self.chatDataSource messageForIndexPath:indexPath];
+    CYBChatMessage *messageItem = [self.chatDataSource messageForIndexPath:indexPath];
     
     if ([cell isKindOfClass:[QMChatNotificationCell class]]) {
         
@@ -544,17 +544,17 @@ UIAlertViewDelegate, QMChatDataSourceDelegate>
     }
 }
 
-- (NSAttributedString *)topLabelAttributedStringForItem:(QBChatMessage *)messageItem {
+- (NSAttributedString *)topLabelAttributedStringForItem:(CYBChatMessage *)messageItem {
     NSAssert(NO, @"Have to be overridden in subclasses!");
     return nil;
 }
 
-- (NSAttributedString *)attributedStringForItem:(QBChatMessage *)messageItem {
+- (NSAttributedString *)attributedStringForItem:(CYBChatMessage *)messageItem {
     NSAssert(NO, @"Have to be overridden in subclasses!");
     return nil;
 }
 
-- (NSAttributedString *)bottomLabelAttributedStringForItem:(QBChatMessage *)messageItem {
+- (NSAttributedString *)bottomLabelAttributedStringForItem:(CYBChatMessage *)messageItem {
     NSAssert(NO, @"Have to be overridden in subclasses!");
     return nil;
 }
@@ -577,7 +577,7 @@ UIAlertViewDelegate, QMChatDataSourceDelegate>
     NSAssert(NO, @"Have to be overridden in subclasses.");
 }
 
-- (Class)viewClassForItem:(QBChatMessage *)item {
+- (Class)viewClassForItem:(CYBChatMessage *)item {
     NSAssert(NO, @"Have to be overridden in subclasses.");
     return nil;
 }
@@ -594,7 +594,7 @@ UIAlertViewDelegate, QMChatDataSourceDelegate>
 - (NSString *)collectionView:(QMChatCollectionView *)collectionView
            itemIdAtIndexPath:(NSIndexPath *)indexPath {
     
-    QBChatMessage *message = [self.chatDataSource messageForIndexPath:indexPath];
+    CYBChatMessage *message = [self.chatDataSource messageForIndexPath:indexPath];
     
     return message.ID;
 }
@@ -602,7 +602,7 @@ UIAlertViewDelegate, QMChatDataSourceDelegate>
 - (QMChatCellLayoutModel)collectionView:(QMChatCollectionView *)collectionView
                  layoutModelAtIndexPath:(NSIndexPath *)indexPath {
     
-    QBChatMessage *item = [self.chatDataSource messageForIndexPath:indexPath];
+    CYBChatMessage *item = [self.chatDataSource messageForIndexPath:indexPath];
     Class class = [self viewClassForItem:item];
     
     return [class layoutModel];

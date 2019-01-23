@@ -20,7 +20,7 @@
 
 @implementation QMChatDataSource
 
-NSComparator messageComparator = ^(QBChatMessage *obj1, QBChatMessage *obj2) {
+NSComparator messageComparator = ^(CYBChatMessage *obj1, CYBChatMessage *obj2) {
     
     NSComparisonResult result = [obj2.dateSent compareWithDate:obj1.dateSent];
     
@@ -66,31 +66,31 @@ NSComparator messageComparator = ^(QBChatMessage *obj1, QBChatMessage *obj2) {
 
 // MARK: - Adding
 
-- (void)addMessage:(QBChatMessage *)message {
+- (void)addMessage:(CYBChatMessage *)message {
     [self addMessages:@[message]];
 }
 
-- (void)addMessages:(NSArray<QBChatMessage *> *)messages {
+- (void)addMessages:(NSArray<CYBChatMessage *> *)messages {
     [self changeDataSourceWithMessages:messages forUpdateType:QMDataSourceActionTypeAdd];
 }
 
 // MARK: - Removing
 
-- (void)deleteMessage:(QBChatMessage *)message {
+- (void)deleteMessage:(CYBChatMessage *)message {
     [self deleteMessages:@[message]];
 }
 
-- (void)deleteMessages:(NSArray<QBChatMessage *> *)messages {
+- (void)deleteMessages:(NSArray<CYBChatMessage *> *)messages {
     [self changeDataSourceWithMessages:messages forUpdateType:QMDataSourceActionTypeRemove];
 }
 
 // MARK: - Updating
 
-- (void)updateMessage:(QBChatMessage *)message {
+- (void)updateMessage:(CYBChatMessage *)message {
     [self updateMessages:@[message]];
 }
 
-- (void)updateMessages:(NSArray<QBChatMessage *> *)messages {
+- (void)updateMessages:(NSArray<CYBChatMessage *> *)messages {
     [self changeDataSourceWithMessages:messages forUpdateType:QMDataSourceActionTypeUpdate];
 }
 
@@ -111,7 +111,7 @@ NSComparator messageComparator = ^(QBChatMessage *obj1, QBChatMessage *obj2) {
                                                                            ascending:YES];
             enumerator = [[messages sortedArrayUsingDescriptors:@[dateSentDescriptor, idDescriptor]] objectEnumerator];
         }
-        for (QBChatMessage *message in enumerator) {
+        for (CYBChatMessage *message in enumerator) {
             
             NSAssert(message.dateSent != nil, @"Message must have dateSent!");
             
@@ -138,7 +138,7 @@ NSComparator messageComparator = ^(QBChatMessage *obj1, QBChatMessage *obj2) {
                 [messagesArray addObject:message];
             }
             
-            QBChatMessage *dividerMessage = nil;
+            CYBChatMessage *dividerMessage = nil;
             NSDate *removedDivider = nil;
             [self handleMessage:message forUpdateType:updateType dividerMessage:&dividerMessage removedDivider:&removedDivider];
             if (dividerMessage != nil) {
@@ -146,11 +146,11 @@ NSComparator messageComparator = ^(QBChatMessage *obj1, QBChatMessage *obj2) {
                 [messageIDs addObject:dividerMessage.ID];
             }
             if (removedDivider != nil) {
-                NSPredicate *predicate = [NSPredicate predicateWithBlock:^BOOL(QBChatMessage *chatMessage, NSDictionary<NSString *,id> *bindings) {
+                NSPredicate *predicate = [NSPredicate predicateWithBlock:^BOOL(CYBChatMessage *chatMessage, NSDictionary<NSString *,id> *bindings) {
                     return chatMessage.isDateDividerMessage && [chatMessage.dateSent isEqualToDate:removedDivider];
                 }];
                 
-                QBChatMessage *msg = [[messagesArray filteredArrayUsingPredicate:predicate] firstObject];
+                CYBChatMessage *msg = [[messagesArray filteredArrayUsingPredicate:predicate] firstObject];
                 
                 [messagesArray removeObject:msg];
                 [messageIDs removeObject:msg.ID];
@@ -183,7 +183,7 @@ NSComparator messageComparator = ^(QBChatMessage *obj1, QBChatMessage *obj2) {
         indexPaths = [self indexPathsForMessages:messages];
     }
     
-    for (QBChatMessage *msg in messages) {
+    for (CYBChatMessage *msg in messages) {
         
         if (updateType == QMDataSourceActionTypeAdd) {
             
@@ -212,7 +212,7 @@ NSComparator messageComparator = ^(QBChatMessage *obj1, QBChatMessage *obj2) {
     
     NSMutableArray *indexPaths = [NSMutableArray arrayWithCapacity:messages.count];
     
-    for (QBChatMessage *msg in messages) {
+    for (CYBChatMessage *msg in messages) {
         
         NSIndexPath *indexPath = [self indexPathForMessage:msg];
         if (indexPath) {
@@ -223,7 +223,7 @@ NSComparator messageComparator = ^(QBChatMessage *obj1, QBChatMessage *obj2) {
     return [NSArray arrayWithArray:indexPaths];
 }
 
-- (BOOL)shouldSkipMessage:(QBChatMessage *)message forDataSourceUpdateType:(QMDataSourceActionType)updateType {
+- (BOOL)shouldSkipMessage:(CYBChatMessage *)message forDataSourceUpdateType:(QMDataSourceActionType)updateType {
     
     BOOL messageExists = [self messageExists:message];
     
@@ -242,7 +242,7 @@ NSComparator messageComparator = ^(QBChatMessage *obj1, QBChatMessage *obj2) {
     return self.allMessages.count;
 }
 
-- (NSUInteger)insertMessage:(QBChatMessage *)message {
+- (NSUInteger)insertMessage:(CYBChatMessage *)message {
     
     NSUInteger index = [self indexThatConformsToMessage:message];
     [self.messages insertObject:message atIndex:index];
@@ -250,7 +250,7 @@ NSComparator messageComparator = ^(QBChatMessage *obj1, QBChatMessage *obj2) {
     return index;
 }
 
-- (QBChatMessage *)messageForIndexPath:(NSIndexPath *)indexPath {
+- (CYBChatMessage *)messageForIndexPath:(NSIndexPath *)indexPath {
     
     if (indexPath.item == NSNotFound) {
         return nil;
@@ -260,19 +260,19 @@ NSComparator messageComparator = ^(QBChatMessage *obj1, QBChatMessage *obj2) {
 }
 
 
-- (BOOL)messageExists:(QBChatMessage *)message {
+- (BOOL)messageExists:(CYBChatMessage *)message {
     
     return [self.allMessages containsObject:message];
 }
 
-- (NSUInteger)indexThatConformsToMessage:(QBChatMessage *)message {
+- (NSUInteger)indexThatConformsToMessage:(CYBChatMessage *)message {
     
     NSUInteger index = [self indexThatConformsToMessage:message
                                             withOptions:NSBinarySearchingInsertionIndex];
     return index;
 }
 
-- (NSUInteger)indexThatConformsToMessage:(QBChatMessage *)message withOptions:(NSBinarySearchingOptions)options {
+- (NSUInteger)indexThatConformsToMessage:(CYBChatMessage *)message withOptions:(NSBinarySearchingOptions)options {
     
     NSArray *messages = self.allMessages;
     NSUInteger index = [messages indexOfObject:message
@@ -282,7 +282,7 @@ NSComparator messageComparator = ^(QBChatMessage *obj1, QBChatMessage *obj2) {
     return index;
 }
 
-- (NSIndexPath *)indexPathForMessage:(QBChatMessage *)message {
+- (NSIndexPath *)indexPathForMessage:(CYBChatMessage *)message {
     
     NSIndexPath *indexPath = nil;
     
@@ -317,7 +317,7 @@ NSComparator messageComparator = ^(QBChatMessage *obj1, QBChatMessage *obj2) {
     return dividerDate;
 }
 
-- (BOOL)hasMessages:(QBChatMessage *)messageToUpdate forUpdateType:(QMDataSourceActionType)updateType {
+- (BOOL)hasMessages:(CYBChatMessage *)messageToUpdate forUpdateType:(QMDataSourceActionType)updateType {
     
     NSDate *startDate = nil;
     NSDate *endDate = nil;
@@ -339,12 +339,12 @@ NSComparator messageComparator = ^(QBChatMessage *obj1, QBChatMessage *obj2) {
     
     NSPredicate *predicate = nil;
     if (updateType == QMDataSourceActionTypeRemove) {
-        predicate = [NSPredicate predicateWithBlock:^BOOL(QBChatMessage * _Nonnull message, NSDictionary<NSString *,id> * _Nullable bindings) {
+        predicate = [NSPredicate predicateWithBlock:^BOOL(CYBChatMessage * _Nonnull message, NSDictionary<NSString *,id> * _Nullable bindings) {
             return !message.isDateDividerMessage && [message.dateSent isBetweenStartDate:startDate andEndDate:endDate respectOrderedSame:YES] && message.ID != messageToUpdate.ID;
         }];
     }
     else {
-        predicate = [NSPredicate predicateWithBlock:^BOOL(QBChatMessage * _Nonnull message, NSDictionary<NSString *,id> * _Nullable bindings) {
+        predicate = [NSPredicate predicateWithBlock:^BOOL(CYBChatMessage * _Nonnull message, NSDictionary<NSString *,id> * _Nullable bindings) {
             return !message.isDateDividerMessage && [message.dateSent isBetweenStartDate:startDate andEndDate:endDate respectOrderedSame:YES];
         }];
     }
@@ -354,15 +354,15 @@ NSComparator messageComparator = ^(QBChatMessage *obj1, QBChatMessage *obj2) {
     return messages.count > 0;
 }
 
-static inline QBChatMessage *dateDividerMessage(NSDate *date, BOOL isCustom) {
-    QBChatMessage *dividerMessage = [QBChatMessage new];
+static inline CYBChatMessage *dateDividerMessage(NSDate *date, BOOL isCustom) {
+    CYBChatMessage *dividerMessage = [CYBChatMessage new];
     dividerMessage.text = isCustom ? [QMDateUtils formattedLastSeenString:date withTimePrefix:nil] : [QMDateUtils formattedStringFromDate:date];
     dividerMessage.dateSent = date;
     dividerMessage.isDateDividerMessage = YES;
     return dividerMessage;
 }
 
-- (void)handleMessage:(QBChatMessage *)message forUpdateType:(QMDataSourceActionType)updateType dividerMessage:(QBChatMessage **)dividerMessage removedDivider:(NSDate **)removedDivider {
+- (void)handleMessage:(CYBChatMessage *)message forUpdateType:(QMDataSourceActionType)updateType dividerMessage:(CYBChatMessage **)dividerMessage removedDivider:(NSDate **)removedDivider {
     
     if (message.isDateDividerMessage) {
         return;
@@ -392,10 +392,10 @@ static inline QBChatMessage *dateDividerMessage(NSDate *date, BOOL isCustom) {
                 if (removeDate != nil) {
                     [self.dateDividers removeObject:removeDate];
                     
-                    NSPredicate *predicate = [NSPredicate predicateWithBlock:^BOOL(QBChatMessage *chatMessage, NSDictionary<NSString *,id> *bindings) {
+                    NSPredicate *predicate = [NSPredicate predicateWithBlock:^BOOL(CYBChatMessage *chatMessage, NSDictionary<NSString *,id> *bindings) {
                         return chatMessage.isDateDividerMessage && [chatMessage.dateSent isEqualToDate:removeDate];
                     }];
-                    QBChatMessage *msg = [[self.allMessages filteredArrayUsingPredicate:predicate] firstObject];
+                    CYBChatMessage *msg = [[self.allMessages filteredArrayUsingPredicate:predicate] firstObject];
                     
                     if (msg != nil) {
                         [self deleteMessage:msg];
@@ -427,11 +427,11 @@ static inline QBChatMessage *dateDividerMessage(NSDate *date, BOOL isCustom) {
         
         NSDate *divideDate = _customDividerInterval > 0 ? [self appropriateDividerForMessageDate:message.dateSent] : [message.dateSent dateAtStartOfDay];
         
-        NSPredicate *predicate = [NSPredicate predicateWithBlock:^BOOL(QBChatMessage *chatMessage, NSDictionary<NSString *,id> *bindings) {
+        NSPredicate *predicate = [NSPredicate predicateWithBlock:^BOOL(CYBChatMessage *chatMessage, NSDictionary<NSString *,id> *bindings) {
             return chatMessage.isDateDividerMessage && [chatMessage.dateSent isEqualToDate:divideDate];
         }];
         
-        QBChatMessage *msg = [[self.allMessages filteredArrayUsingPredicate:predicate] firstObject];
+        CYBChatMessage *msg = [[self.allMessages filteredArrayUsingPredicate:predicate] firstObject];
         
         if (divideDate == nil) {
             return;
