@@ -98,8 +98,10 @@ NSComparator messageComparator = ^(CYBChatMessage *obj1, CYBChatMessage *obj2) {
 
 - (void)changeDataSourceWithMessages:(NSArray *)messages forUpdateType:(QMDataSourceActionType)updateType {
     
+    __weak typeof(self) weakSelf = self;
     dispatch_async(_serialQueue, ^{
-        
+        __strong typeof(weakSelf) strongSelf = weakSelf;
+
         NSMutableArray *messageIDs = [NSMutableArray arrayWithCapacity:messages.count];
         NSMutableArray *messagesArray = [NSMutableArray arrayWithCapacity:messages.count];
         NSEnumerator *enumerator = [messages objectEnumerator];
